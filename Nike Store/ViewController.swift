@@ -30,7 +30,7 @@ class ViewController: UIViewController {
         configNavigationBar()
         
         //Making buttons corner radious rounded
-        configButtons(adidasButton, shoeButton2, shoeButton3, shoeButton4)
+        configButtons(adidasButton, shoeButton2, shoeButton3, shoeButton4, buttonTag: 0)
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.register(UINib(nibName: K.cellNibName, bundle: nil), forCellWithReuseIdentifier: K.CellIDs.shoeID)
@@ -52,10 +52,13 @@ class ViewController: UIViewController {
         navigationItem.titleView = logoImageView
     }
     
-    func configButtons(_ buttons: UIButton...) {
+    
+    
+    //make buttons look dim
+    func configButtons(_ buttons: UIButton..., buttonTag: Int) {
          
         for button in buttons {
-            if button.tag != 1 {
+            if button.tag != buttonTag {
                 button.alpha = 0.5
             }
          button.layer.cornerRadius =  0.5 * adidasButton.bounds.size.width
@@ -63,6 +66,22 @@ class ViewController: UIViewController {
          button.clipsToBounds = true
         }
     }
+    
+    @IBAction func buttonPressed(_ sender: UIButton) {
+        
+        let indexPath = IndexPath(item: sender.tag, section: 0)
+         collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
+     
+        if sender.tag != 0 {
+            adidasButton.alpha = 0.5
+            shoeButton2.alpha = 1.0
+        } else {
+            shoeButton2.alpha = 0.5
+            adidasButton.alpha = 1.0
+        }
+    }
+    
+    
 
 }
 
@@ -76,9 +95,11 @@ extension ViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: K.CellIDs.shoeID, for: indexPath) as! ShoeCellCollectionViewCell
-        
         return cell
     }
+    
+    
+    
     
     
 }
@@ -88,8 +109,21 @@ extension ViewController: UICollectionViewDataSource {
 
 extension ViewController: UICollectionViewDelegate {
     
- 
-
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+           for cell in collectionView.visibleCells {
+            if  let indexPath = collectionView.indexPath(for: cell) {
+                if indexPath.item == 0 {
+                    shoeButton2.alpha = 0.5
+                    adidasButton.alpha = 1.0
+                } else {
+                    shoeButton2.alpha = 1.0
+                    adidasButton.alpha = 0.5
+                }
+            }
+            
+            
+         }
+    }
     
 }
 
@@ -103,6 +137,8 @@ extension ViewController: UICollectionViewDelegateFlowLayout {
         
         return collectionViewSize
     }
+    
+    
 }
 
 
