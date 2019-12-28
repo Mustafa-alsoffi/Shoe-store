@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
-    
+    let shoesArray = ["Nike-Air270-blackBig", "adidasFALCON"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,10 +34,6 @@ class ViewController: UIViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.register(UINib(nibName: K.cellNibName, bundle: nil), forCellWithReuseIdentifier: K.CellIDs.shoeID)
-        
-
-       
-       
         
 
     }
@@ -95,6 +91,8 @@ extension ViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: K.CellIDs.shoeID, for: indexPath) as! ShoeCellCollectionViewCell
+        
+        cell.shoeImageView.image = UIImage(named: shoesArray[indexPath.item])
         return cell
     }
     
