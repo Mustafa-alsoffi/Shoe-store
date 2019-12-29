@@ -10,6 +10,8 @@ import UIKit
 
 class ShoesCollectionVC: UIViewController {
     
+    // This is customNavBar
+    
     @IBOutlet weak var adidasButton: UIButton!
     
     @IBOutlet weak var shoeButton2: UIButton!
