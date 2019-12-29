@@ -8,7 +8,7 @@
 
 import UIKit
 
-// this is branch
+// this is master
 
 class ShoesCollectionVC: UIViewController {
     
@@ -47,18 +47,15 @@ class ShoesCollectionVC: UIViewController {
         navigationItem.titleView?.contentMode = .scaleAspectFit
     }
     
-    override func viewWillLayoutSubviews() {
-        super.viewWillLayoutSubviews()
-      
-    }
+
     
     func configNavigationBar() {
         navigationController?.navigationBar.barTintColor = K.UIColors.deepCove
         let logo = UIImage(named: "logo-whiiite-1")
         let logoImageView = UIImageView(image:logo)
         logoImageView.frame = CGRect(x: 0, y: 0, width: 80, height: 300)
-        logoImageView.contentMode = .scaleAspectFill
-        logoImageView.setNeedsUpdateConstraints()
+        logoImageView.contentMode = .scaleAspectFit
+       
 
 
         navigationItem.titleView = logoImageView
