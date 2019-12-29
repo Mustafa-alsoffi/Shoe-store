@@ -10,12 +10,14 @@
 		F607CCBE23B2135A00F67247 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F607CCBD23B2135A00F67247 /* Constants.swift */; };
 		F6ABFE6423B10E3500EEF25E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ABFE6323B10E3500EEF25E /* AppDelegate.swift */; };
 		F6ABFE6623B10E3500EEF25E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ABFE6523B10E3500EEF25E /* SceneDelegate.swift */; };
-		F6ABFE6823B10E3500EEF25E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ABFE6723B10E3500EEF25E /* ViewController.swift */; };
+		F6ABFE6823B10E3500EEF25E /* ShoesCollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ABFE6723B10E3500EEF25E /* ShoesCollectionVC.swift */; };
 		F6ABFE6B23B10E3500EEF25E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6ABFE6923B10E3500EEF25E /* Main.storyboard */; };
 		F6ABFE6D23B10E4100EEF25E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6ABFE6C23B10E4100EEF25E /* Assets.xcassets */; };
 		F6ABFE7023B10E4100EEF25E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6ABFE6E23B10E4100EEF25E /* LaunchScreen.storyboard */; };
 		F6BBF08B23B551B400274326 /* ShoeCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BBF08923B551B400274326 /* ShoeCellCollectionViewCell.swift */; };
 		F6BBF08C23B551B400274326 /* ShoeCellCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6BBF08A23B551B400274326 /* ShoeCellCollectionViewCell.xib */; };
+		F6BBF0A223B7E46000274326 /* Shoe.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BBF0A123B7E46000274326 /* Shoe.swift */; };
+		F6BBF0A523B7EC5000274326 /* ShoeSelectedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BBF0A423B7EC5000274326 /* ShoeSelectedVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,13 +25,15 @@
 		F6ABFE6023B10E3500EEF25E /* Nike Store.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Nike Store.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6ABFE6323B10E3500EEF25E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F6ABFE6523B10E3500EEF25E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F6ABFE6723B10E3500EEF25E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F6ABFE6723B10E3500EEF25E /* ShoesCollectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoesCollectionVC.swift; sourceTree = "<group>"; };
 		F6ABFE6A23B10E3500EEF25E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F6ABFE6C23B10E4100EEF25E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F6ABFE6F23B10E4100EEF25E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F6ABFE7123B10E4100EEF25E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F6BBF08923B551B400274326 /* ShoeCellCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoeCellCollectionViewCell.swift; sourceTree = "<group>"; };
 		F6BBF08A23B551B400274326 /* ShoeCellCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShoeCellCollectionViewCell.xib; sourceTree = "<group>"; };
+		F6BBF0A123B7E46000274326 /* Shoe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shoe.swift; sourceTree = "<group>"; };
+		F6BBF0A423B7EC5000274326 /* ShoeSelectedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoeSelectedVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,10 +66,11 @@
 		F6ABFE6223B10E3500EEF25E /* Nike Store */ = {
 			isa = PBXGroup;
 			children = (
+				F6BBF0A023B7E43700274326 /* Models */,
+				F6BBF08423B4C24900274326 /* Views */,
+				F6BBF0A323B7EBF700274326 /* Controllers */,
 				F6ABFE6323B10E3500EEF25E /* AppDelegate.swift */,
 				F6ABFE6523B10E3500EEF25E /* SceneDelegate.swift */,
-				F6ABFE6723B10E3500EEF25E /* ViewController.swift */,
-				F6BBF08423B4C24900274326 /* Views */,
 				F6ABFE6C23B10E4100EEF25E /* Assets.xcassets */,
 				F6ABFE6E23B10E4100EEF25E /* LaunchScreen.storyboard */,
 				F6ABFE7123B10E4100EEF25E /* Info.plist */,
@@ -82,6 +87,23 @@
 				F6BBF08A23B551B400274326 /* ShoeCellCollectionViewCell.xib */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		F6BBF0A023B7E43700274326 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F6BBF0A123B7E46000274326 /* Shoe.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F6BBF0A323B7EBF700274326 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F6ABFE6723B10E3500EEF25E /* ShoesCollectionVC.swift */,
+				F6BBF0A423B7EC5000274326 /* ShoeSelectedVC.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,10 +178,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6BBF0A223B7E46000274326 /* Shoe.swift in Sources */,
 				F6BBF08B23B551B400274326 /* ShoeCellCollectionViewCell.swift in Sources */,
-				F6ABFE6823B10E3500EEF25E /* ViewController.swift in Sources */,
+				F6ABFE6823B10E3500EEF25E /* ShoesCollectionVC.swift in Sources */,
 				F6ABFE6423B10E3500EEF25E /* AppDelegate.swift in Sources */,
 				F6ABFE6623B10E3500EEF25E /* SceneDelegate.swift in Sources */,
+				F6BBF0A523B7EC5000274326 /* ShoeSelectedVC.swift in Sources */,
 				F607CCBE23B2135A00F67247 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

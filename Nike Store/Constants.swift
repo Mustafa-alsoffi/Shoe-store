@@ -11,6 +11,12 @@ import UIKit
 
 struct K {
     static var cellNibName = "ShoeCellCollectionViewCell"
+    static var goToShoe = "GoToShoe"
+    
+    struct ShoesNames {
+        static var adidasFalcon = "adidasFALCON"
+        static var nikeAirBlack = "Nike-Air270-blackBig"
+    }
     struct UIColors {
         static var deepCove = UIColor(red:0.07, green:0.06, blue:0.25, alpha:1.0)
         static var darkBlue = UIColor(red:0.01, green:0.05, blue:0.13, alpha:1.0)

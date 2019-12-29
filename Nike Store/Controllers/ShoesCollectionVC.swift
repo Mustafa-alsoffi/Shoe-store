@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ShoesCollectionVC: UIViewController {
     
     @IBOutlet weak var adidasButton: UIButton!
     
@@ -20,14 +20,15 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
-    let shoesArray = ["Nike-Air270-blackBig", "adidasFALCON"]
+    let shoesArray = [Shoe(image: K.ShoesNames.nikeAirBlack, price: "$210"), Shoe(image: K.ShoesNames.adidasFalcon, price: "$127")]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = K.UIColors.deepCove
         
         //Configaring the navigation bar
-        configNavigationBar()
+         configNavigationBar()
+
         
         //Making buttons corner radious rounded
         configButtons(adidasButton, shoeButton2, shoeButton3, shoeButton4, buttonTag: 0)
@@ -38,14 +39,29 @@ class ViewController: UIViewController {
 
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+    }
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+    }
+    
     func configNavigationBar() {
         navigationController?.navigationBar.barTintColor = K.UIColors.deepCove
         let logo = UIImage(named: "logo-whiiite-1")
         let logoImageView = UIImageView(image:logo)
         logoImageView.frame = CGRect(x: 0, y: 0, width: 80, height: 150)
         logoImageView.contentMode = .scaleAspectFill
-        
+    
+
         navigationItem.titleView = logoImageView
+        
+//        navigationItem.titleView?.contentMode = .scaleAspectFill
+        
+    
+        
     }
     
     
@@ -78,13 +94,14 @@ class ViewController: UIViewController {
     }
     
     
+    
 
 }
 
 
 //MARK: - Collection View Data Source
 
-extension ViewController: UICollectionViewDataSource {
+extension ShoesCollectionVC: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 2
     }
@@ -92,7 +109,9 @@ extension ViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: K.CellIDs.shoeID, for: indexPath) as! ShoeCellCollectionViewCell
         
-        cell.shoeImageView.image = UIImage(named: shoesArray[indexPath.item])
+        cell.shoeImageView.image = UIImage(named: shoesArray[indexPath.item].image)
+        cell.priceLabel.text = shoesArray[indexPath.item].price
+        
         return cell
     }
     
@@ -105,10 +124,10 @@ extension ViewController: UICollectionViewDataSource {
 
 //MARK: - Collection View Delegate
 
-extension ViewController: UICollectionViewDelegate {
+extension ShoesCollectionVC: UICollectionViewDelegate {
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-           for cell in collectionView.visibleCells {
+        for cell in collectionView.visibleCells {
             if  let indexPath = collectionView.indexPath(for: cell) {
                 if indexPath.item == 0 {
                     shoeButton2.alpha = 0.5
@@ -118,17 +137,21 @@ extension ViewController: UICollectionViewDelegate {
                     adidasButton.alpha = 0.5
                 }
             }
-            
-            
-         }
+        }
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        performSegue(withIdentifier: K.goToShoe, sender: self)
+        
+    }
+    
     
 }
 
 
 //MARK: - Collection View Delegate FlowLayout
 
-extension ViewController: UICollectionViewDelegateFlowLayout {
+extension ShoesCollectionVC: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let collectionViewSize = collectionView.frame.size
@@ -136,7 +159,7 @@ extension ViewController: UICollectionViewDelegateFlowLayout {
         return collectionViewSize
     }
     
-    
+
 }
 
 
