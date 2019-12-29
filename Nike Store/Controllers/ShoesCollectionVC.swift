@@ -8,6 +8,8 @@
 
 import UIKit
 
+// this is master
+
 class ShoesCollectionVC: UIViewController {
     
     @IBOutlet weak var adidasButton: UIButton!
@@ -27,7 +29,7 @@ class ShoesCollectionVC: UIViewController {
         view.backgroundColor = K.UIColors.deepCove
         
         //Configaring the navigation bar
-         configNavigationBar()
+         
 
         
         //Making buttons corner radious rounded
@@ -41,28 +43,31 @@ class ShoesCollectionVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+        configNavigationBar()
+        navigationItem.titleView?.contentMode = .scaleAspectFit
     }
     
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
+      
     }
     
     func configNavigationBar() {
         navigationController?.navigationBar.barTintColor = K.UIColors.deepCove
         let logo = UIImage(named: "logo-whiiite-1")
         let logoImageView = UIImageView(image:logo)
-        logoImageView.frame = CGRect(x: 0, y: 0, width: 80, height: 150)
+        logoImageView.frame = CGRect(x: 0, y: 0, width: 80, height: 300)
         logoImageView.contentMode = .scaleAspectFill
-    
+        logoImageView.setNeedsUpdateConstraints()
+
 
         navigationItem.titleView = logoImageView
+
         
-//        navigationItem.titleView?.contentMode = .scaleAspectFill
-        
-    
-        
+ 
     }
+    
+  
     
     
     

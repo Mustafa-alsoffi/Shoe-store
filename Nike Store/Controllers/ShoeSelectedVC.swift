@@ -19,7 +19,7 @@ class ShoeSelectedVC: UIViewController {
             let logo = UIImage(named: "logo-whiiite-1")
             let logoImageView = UIImageView(image:logo)
             logoImageView.frame = CGRect(x: 0, y: 0, width: 80, height: 150)
-            logoImageView.contentMode = .scaleAspectFill
+            logoImageView.contentMode = .scaleAspectFit
         
 
             navigationItem.titleView = logoImageView
