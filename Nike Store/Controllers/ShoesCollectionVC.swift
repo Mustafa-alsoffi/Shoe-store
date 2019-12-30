@@ -26,14 +26,13 @@ class ShoesCollectionVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //Custom color for the view
         view.backgroundColor = K.UIColors.deepCove
         
-        //Configaring the navigation bar
-         
-
-        
         //Making buttons corner radious rounded
-        configButtons(adidasButton, shoeButton2, shoeButton3, shoeButton4, buttonTag: 0)
+        ShoesCollectionVC.configButtons(adidasButton, shoeButton2, shoeButton3, shoeButton4, buttonTag: 0)
+        
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.register(UINib(nibName: K.cellNibName, bundle: nil), forCellWithReuseIdentifier: K.CellIDs.shoeID)
@@ -43,39 +42,21 @@ class ShoesCollectionVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        configNavigationBar()
-        navigationItem.titleView?.contentMode = .scaleAspectFit
-    }
-    
-
-    
-    func configNavigationBar() {
         navigationController?.navigationBar.barTintColor = K.UIColors.deepCove
-        let logo = UIImage(named: "logo-whiiite-1")
-        let logoImageView = UIImageView(image:logo)
-        logoImageView.frame = CGRect(x: 0, y: 0, width: 80, height: 300)
-        logoImageView.contentMode = .scaleAspectFit
-       
-
-
-        navigationItem.titleView = logoImageView
-
-        
- 
+        navigationItem.addImage(name: K.logoName)
     }
-    
-  
-    
-    
-    
-    //make buttons look dim
-    func configButtons(_ buttons: UIButton..., buttonTag: Int) {
+
+    //make buttons look dim and roundded
+   static func configButtons(_ buttons: UIButton..., buttonTag: Int?) {
          
         for button in buttons {
-            if button.tag != buttonTag {
+            
+            if let tag = buttonTag {
+            if button.tag != tag {
                 button.alpha = 0.5
             }
-         button.layer.cornerRadius =  0.5 * adidasButton.bounds.size.width
+            }
+         button.layer.cornerRadius =  0.5 * button.bounds.size.width
          button.imageView?.contentMode = .scaleAspectFit
          button.clipsToBounds = true
         }
@@ -94,9 +75,6 @@ class ShoesCollectionVC: UIViewController {
             adidasButton.alpha = 1.0
         }
     }
-    
-    
-    
 
 }
 

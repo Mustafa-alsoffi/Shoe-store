@@ -11,7 +11,9 @@ import UIKit
 
 struct K {
     static var cellNibName = "ShoeCellCollectionViewCell"
+    static var shoeSelectedNibName = "SelectedShoeCell"
     static var goToShoe = "GoToShoe"
+    static var logoName = "logo-whiiite-1"
     
     struct ShoesNames {
         static var adidasFalcon = "adidasFALCON"
@@ -25,5 +27,6 @@ struct K {
     
     struct CellIDs {
         static var shoeID = "ShoeCell"
+        static var shoeDetailsID = "ShoeDetailsCell"
     }
 }
