@@ -23,20 +23,41 @@ class ShoeSelectedVC: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-
+    
+    @IBOutlet weak var priceLabel: UILabel!
+    
+let myView = UIView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        // will dry this code later
         
-        navigationItem.addImage(name: K.logoName)
+        
+        
+        
 
-        infoStackView.addBackgroundWithRoundedCorners(color: .gray, maskedCorner: .layerMinXMinYCorner)
-        
-        ShoesCollectionVC.configButtons(colorButton1, colorButton2, colorButton3, colorButton4, buttonTag: nil)
         
         tableView.dataSource = self
         tableView.delegate = self
         tableView.register(UINib(nibName: K.shoeSelectedNibName, bundle: nil), forCellReuseIdentifier: K.CellIDs.shoeDetailsID)
   
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        configViews()
+    }
+    
+    
+    func configViews () {
+        navigationItem.addImage(name: K.logoName)
+
+        infoStackView.addBackgroundWithRoundedCorners(color: .gray, maskedCorner: .layerMinXMinYCorner)
+        priceLabel.layer.masksToBounds = true
+        priceLabel.layer.cornerRadius = 10
+        priceLabel.layer.maskedCorners = [.layerMinXMinYCorner, .layerMinXMaxYCorner]
+        priceLabel.backgroundColor = K.UIColors.darkBlue
+        ShoesCollectionVC.configButtons(colorButton1, colorButton2, colorButton3, colorButton4, buttonTag: nil)
     }
 
 }
@@ -49,7 +70,7 @@ extension ShoeSelectedVC: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: K.CellIDs.shoeDetailsID, for: indexPath) as! SelectedShoeCell
-        
+        cell.selectionStyle = .none
         return cell
     }
     
@@ -63,5 +84,13 @@ extension ShoeSelectedVC: UITableViewDelegate {
         let height = tableView.frame.height
         
         return height
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+       performSegue(withIdentifier: "GoToShoeSizes", sender: self)
+        
+        
+
     }
 }
