@@ -24,13 +24,13 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shapes-small" translatesAutoresizingMaskIntoConstraints="NO" id="nX0-A1-Lmv">
-                                <rect key="frame" x="252.5" y="50" width="281.5" height="300.5"/>
+                                <rect key="frame" x="-29" y="50" width="563" height="601"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="nX0-A1-Lmv" secondAttribute="height" multiplier="281:300" id="d2M-3L-5KS"/>
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shapes-small2" translatesAutoresizingMaskIntoConstraints="NO" id="iUi-aD-UKX" userLabel="shapes-small2">
-                                <rect key="frame" x="-1" y="268" width="304" height="272"/>
+                                <rect key="frame" x="-1" y="132" width="608" height="544"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="_blue_lightFU____ tU  E_-2" translatesAutoresizingMaskIntoConstraints="NO" id="nxQ-fk-4sk">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
