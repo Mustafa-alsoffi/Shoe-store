@@ -10,7 +10,6 @@ import UIKit
 
 class ShoeSelectedVC: UIViewController {
     
-    @IBOutlet weak var infoStackView: UIStackView!
     
     @IBOutlet weak var colorButton1: UIButton!
     
@@ -25,6 +24,9 @@ class ShoeSelectedVC: UIViewController {
     
     
     @IBOutlet weak var priceLabel: UILabel!
+    
+    
+  
     
 let myView = UIView()
     
@@ -52,7 +54,6 @@ let myView = UIView()
     func configViews () {
         navigationItem.addImage(name: K.logoName)
 
-        infoStackView.addBackgroundWithRoundedCorners(color: .gray, maskedCorner: .layerMinXMinYCorner)
         priceLabel.layer.masksToBounds = true
         priceLabel.layer.cornerRadius = 10
         priceLabel.layer.maskedCorners = [.layerMinXMinYCorner, .layerMinXMaxYCorner]
@@ -65,12 +66,13 @@ let myView = UIView()
 //MARK: - Table View Data Source
 extension ShoeSelectedVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 2
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: K.CellIDs.shoeDetailsID, for: indexPath) as! SelectedShoeCell
         cell.selectionStyle = .none
+        
         return cell
     }
     
