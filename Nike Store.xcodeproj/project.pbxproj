@@ -13,6 +13,8 @@
 		F672FE4823BA44330044FA74 /* SelectedShoeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F672FE4623BA44330044FA74 /* SelectedShoeCell.swift */; };
 		F672FE4923BA44330044FA74 /* SelectedShoeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F672FE4723BA44330044FA74 /* SelectedShoeCell.xib */; };
 		F695387223BE9001009FB4CF /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F695387123BE9001009FB4CF /* TabBarViewController.swift */; };
+		F695387523BEB7D1009FB4CF /* SizeCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F695387323BEB7D1009FB4CF /* SizeCVCell.swift */; };
+		F695387623BEB7D1009FB4CF /* SizeCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F695387423BEB7D1009FB4CF /* SizeCVCell.xib */; };
 		F6ABFE6423B10E3500EEF25E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ABFE6323B10E3500EEF25E /* AppDelegate.swift */; };
 		F6ABFE6623B10E3500EEF25E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ABFE6523B10E3500EEF25E /* SceneDelegate.swift */; };
 		F6ABFE6823B10E3500EEF25E /* ShoesCollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ABFE6723B10E3500EEF25E /* ShoesCollectionVC.swift */; };
@@ -32,6 +34,8 @@
 		F672FE4623BA44330044FA74 /* SelectedShoeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedShoeCell.swift; sourceTree = "<group>"; };
 		F672FE4723BA44330044FA74 /* SelectedShoeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectedShoeCell.xib; sourceTree = "<group>"; };
 		F695387123BE9001009FB4CF /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		F695387323BEB7D1009FB4CF /* SizeCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeCVCell.swift; sourceTree = "<group>"; };
+		F695387423BEB7D1009FB4CF /* SizeCVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SizeCVCell.xib; sourceTree = "<group>"; };
 		F6ABFE6023B10E3500EEF25E /* Nike Store.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Nike Store.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6ABFE6323B10E3500EEF25E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F6ABFE6523B10E3500EEF25E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -98,6 +102,8 @@
 				F6BBF08A23B551B400274326 /* ShoeCellCollectionViewCell.xib */,
 				F672FE4623BA44330044FA74 /* SelectedShoeCell.swift */,
 				F672FE4723BA44330044FA74 /* SelectedShoeCell.xib */,
+				F695387323BEB7D1009FB4CF /* SizeCVCell.swift */,
+				F695387423BEB7D1009FB4CF /* SizeCVCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -184,6 +190,7 @@
 				F6BBF08C23B551B400274326 /* ShoeCellCollectionViewCell.xib in Resources */,
 				F6ABFE6D23B10E4100EEF25E /* Assets.xcassets in Resources */,
 				F6ABFE6B23B10E3500EEF25E /* Main.storyboard in Resources */,
+				F695387623BEB7D1009FB4CF /* SizeCVCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,6 +204,7 @@
 				F6BBF0A223B7E46000274326 /* Shoe.swift in Sources */,
 				F6BBF08B23B551B400274326 /* ShoeCellCollectionViewCell.swift in Sources */,
 				F695387223BE9001009FB4CF /* TabBarViewController.swift in Sources */,
+				F695387523BEB7D1009FB4CF /* SizeCVCell.swift in Sources */,
 				F6ABFE6823B10E3500EEF25E /* ShoesCollectionVC.swift in Sources */,
 				F672FE4823BA44330044FA74 /* SelectedShoeCell.swift in Sources */,
 				F672FE4523B8FB990044FA74 /* Extensions.swift in Sources */,

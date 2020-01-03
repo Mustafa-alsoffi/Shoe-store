@@ -17,4 +17,10 @@ class TabBarViewController : UIViewController {
         view.layer.maskedCorners = .layerMinXMinYCorner
         view.backgroundColor = K.UIColors.darkBlue
     }
+    
+    
+    @IBAction func buttonPressed(_ sender: UIButton) {
+        print("Button was pressed!")
+    }
+    
 }
