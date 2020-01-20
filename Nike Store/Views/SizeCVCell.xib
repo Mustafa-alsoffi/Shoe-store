@@ -59,6 +59,8 @@
             <size key="customSize" width="215" height="214"/>
             <connections>
                 <outlet property="SizeCellView" destination="pIf-A9-KHR" id="qBa-1o-deV"/>
+                <outlet property="sizeNum" destination="DjO-fe-dcR" id="IFd-83-OlL"/>
+                <outlet property="sizeStandard" destination="fBf-Yq-phw" id="yft-gh-IZo"/>
             </connections>
             <point key="canvasLocation" x="255.79710144927537" y="48.883928571428569"/>
         </collectionViewCell>

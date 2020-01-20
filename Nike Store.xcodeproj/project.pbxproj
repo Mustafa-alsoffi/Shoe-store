@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F607CCBE23B2135A00F67247 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F607CCBD23B2135A00F67247 /* Constants.swift */; };
+		F624ED3A23C3CB5D00048C3C /* NumberOfPairsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F624ED3923C3CB5D00048C3C /* NumberOfPairsVC.swift */; };
 		F66E8DD523BD1333009681CE /* SizeOfShoeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66E8DD323BD1333009681CE /* SizeOfShoeVC.swift */; };
 		F672FE4523B8FB990044FA74 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F672FE4423B8FB990044FA74 /* Extensions.swift */; };
 		F672FE4823BA44330044FA74 /* SelectedShoeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F672FE4623BA44330044FA74 /* SelectedShoeCell.swift */; };
@@ -29,6 +30,7 @@
 
 /* Begin PBXFileReference section */
 		F607CCBD23B2135A00F67247 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		F624ED3923C3CB5D00048C3C /* NumberOfPairsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberOfPairsVC.swift; sourceTree = "<group>"; };
 		F66E8DD323BD1333009681CE /* SizeOfShoeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeOfShoeVC.swift; sourceTree = "<group>"; };
 		F672FE4423B8FB990044FA74 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		F672FE4623BA44330044FA74 /* SelectedShoeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedShoeCell.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 				F6BBF0A423B7EC5000274326 /* ShoeSelectedVC.swift */,
 				F66E8DD323BD1333009681CE /* SizeOfShoeVC.swift */,
 				F695387123BE9001009FB4CF /* TabBarViewController.swift */,
+				F624ED3923C3CB5D00048C3C /* NumberOfPairsVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -211,6 +214,7 @@
 				F66E8DD523BD1333009681CE /* SizeOfShoeVC.swift in Sources */,
 				F6ABFE6423B10E3500EEF25E /* AppDelegate.swift in Sources */,
 				F6ABFE6623B10E3500EEF25E /* SceneDelegate.swift in Sources */,
+				F624ED3A23C3CB5D00048C3C /* NumberOfPairsVC.swift in Sources */,
 				F6BBF0A523B7EC5000274326 /* ShoeSelectedVC.swift in Sources */,
 				F607CCBE23B2135A00F67247 /* Constants.swift in Sources */,
 			);
@@ -366,7 +370,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mustafa.Nike-Store";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -384,7 +388,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mustafa.Nike-Store";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

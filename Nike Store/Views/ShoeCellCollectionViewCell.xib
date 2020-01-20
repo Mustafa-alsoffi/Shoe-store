@@ -22,34 +22,34 @@
                         <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$127" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rkx-Un-v7S">
-                        <rect key="frame" x="0.0" y="254" width="120" height="48"/>
+                        <rect key="frame" x="0.0" y="254" width="100" height="48"/>
                         <constraints>
-                            <constraint firstAttribute="width" secondItem="rkx-Un-v7S" secondAttribute="height" multiplier="30:12" id="3kZ-uL-hoe"/>
+                            <constraint firstAttribute="width" constant="100" id="DUV-1q-n1e"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" weight="thin" pointSize="40"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="an7-W9-8cC">
-                        <rect key="frame" x="120" y="254" width="15" height="48"/>
+                        <rect key="frame" x="100" y="254" width="15" height="48"/>
                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="width" secondItem="an7-W9-8cC" secondAttribute="height" multiplier="5:16" id="5Gs-m6-rNn"/>
+                            <constraint firstAttribute="width" constant="15" id="0hb-g8-UH2"/>
                         </constraints>
                     </view>
                 </subviews>
             </view>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
+                <constraint firstItem="an7-W9-8cC" firstAttribute="height" secondItem="rkx-Un-v7S" secondAttribute="height" id="3oo-lW-Bnb"/>
+                <constraint firstItem="an7-W9-8cC" firstAttribute="leading" secondItem="rkx-Un-v7S" secondAttribute="trailing" id="BdV-yg-SYR"/>
                 <constraint firstItem="rkx-Un-v7S" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="Fhi-3f-MpB"/>
-                <constraint firstItem="an7-W9-8cC" firstAttribute="height" secondItem="rkx-Un-v7S" secondAttribute="height" id="QOq-mX-vwD"/>
                 <constraint firstItem="E5G-Pf-nQ1" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="WrH-J1-bB1"/>
                 <constraint firstItem="E5G-Pf-nQ1" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="20" id="fIA-4H-ou2"/>
                 <constraint firstAttribute="bottom" secondItem="E5G-Pf-nQ1" secondAttribute="bottom" id="h6h-UE-gcj"/>
                 <constraint firstItem="rkx-Un-v7S" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="lld-9o-xbt"/>
                 <constraint firstAttribute="trailing" secondItem="E5G-Pf-nQ1" secondAttribute="trailing" id="mfm-vh-bSq"/>
-                <constraint firstItem="an7-W9-8cC" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="tdY-9a-CL9"/>
-                <constraint firstItem="an7-W9-8cC" firstAttribute="leading" secondItem="rkx-Un-v7S" secondAttribute="trailing" id="v5e-N4-9fE"/>
+                <constraint firstItem="an7-W9-8cC" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="ssC-Jh-FUY"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="414" height="556"/>
@@ -58,7 +58,7 @@
                 <outlet property="priceTagView" destination="an7-W9-8cC" id="wjY-7Q-mRQ"/>
                 <outlet property="shoeImageView" destination="E5G-Pf-nQ1" id="25G-vl-wEF"/>
             </connections>
-            <point key="canvasLocation" x="344.92753623188406" y="54.910714285714285"/>
+            <point key="canvasLocation" x="343.47826086956525" y="54.910714285714285"/>
         </collectionViewCell>
     </objects>
     <resources>

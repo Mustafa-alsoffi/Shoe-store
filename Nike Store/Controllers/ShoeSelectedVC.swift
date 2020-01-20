@@ -8,6 +8,8 @@
 
 import UIKit
 
+
+
 class ShoeSelectedVC: UIViewController {
     
     
@@ -26,27 +28,25 @@ class ShoeSelectedVC: UIViewController {
     @IBOutlet weak var priceLabel: UILabel!
     
     
-  
     
-let myView = UIView()
+//let myView = UIView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // will dry this code later
         
-        
-        
-
-        
+ 
+        configViews()
         tableView.dataSource = self
         tableView.delegate = self
         tableView.register(UINib(nibName: K.shoeSelectedNibName, bundle: nil), forCellReuseIdentifier: K.CellIDs.shoeDetailsID)
   
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        configViews()
+ 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        print("ViewDidAppear")
     }
     
     
@@ -59,6 +59,9 @@ let myView = UIView()
         priceLabel.backgroundColor = K.UIColors.darkBlue
         ShoesCollectionVC.configButtons(colorButton1, colorButton2, colorButton3, colorButton4, buttonTag: nil)
     }
+    
+    
+
 
 }
 
@@ -89,9 +92,10 @@ extension ShoeSelectedVC: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-       performSegue(withIdentifier: "GoToShoeSizes", sender: self)
+       performSegue(withIdentifier: "GoToShoeSizes", sender: nil)
         
         
 
     }
 }
+

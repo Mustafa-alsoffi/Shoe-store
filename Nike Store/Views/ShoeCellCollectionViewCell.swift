@@ -21,6 +21,7 @@ class ShoeCellCollectionViewCell: UICollectionViewCell {
         // Initialization code
         priceLabel.backgroundColor = K.UIColors.darkBlue
         priceTagView.backgroundColor = K.UIColors.flatPink
+        
     }
 
 }

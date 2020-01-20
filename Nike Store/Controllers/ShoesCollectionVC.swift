@@ -89,7 +89,7 @@ extension ShoesCollectionVC: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: K.CellIDs.shoeID, for: indexPath) as! ShoeCellCollectionViewCell
         
-        cell.shoeImageView.image = UIImage(named: shoesArray[indexPath.item].image)
+        cell.shoeImageView.image = UIImage(named: shoesArray[indexPath.item].image!)
         cell.priceLabel.text = shoesArray[indexPath.item].price
         
         return cell

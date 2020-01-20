@@ -12,10 +12,15 @@ class SizeCVCell: UICollectionViewCell {
     
     @IBOutlet weak var SizeCellView: UIView!
     
-
+    @IBOutlet weak var sizeNum: UILabel!
+    
+    @IBOutlet weak var sizeStandard: UILabel!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         SizeCellView.layer.cornerRadius = 10
+      
         
     }
 

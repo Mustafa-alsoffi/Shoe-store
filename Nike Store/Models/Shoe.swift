@@ -11,6 +11,17 @@ import Foundation
 
 struct Shoe {
     
-    var image : String
-    var price : String
+    var image : String?
+    var price : String?
+    var size : String?
+    var sizeStandard : String?
+    
+    init(image: String? = nil, price: String? = nil, size: String? = nil, sizeStandard: String? = nil) {
+        self.image = image
+        self.price = price
+        self.size = size
+        self.sizeStandard = sizeStandard
+    }
+    
+
 }
